@@ -1,0 +1,15 @@
+요구사항 1)
+서블릿 클래스 선언 WelcomeServlet이라는 이름의 서블릿 클래스를 선언하고, HttpServlet 클래스를 상속받도록 작성하세요. 
+이 서블릿은 doGet 메소드를 오버라이드하여 요청을 처리해야 합니다.
+
+요구사항 2)
+요청 처리doGet 메소드 내에서, HTTP 요청으로부터 "name" 파라미터를 추출하고, 이를 사용하여 사용자에게 환영 메시지를 동적으로 생성하여 응답하도록 구현하세요. 
+만약 "name" 파라미터가 없는 경우, "Hello, Guest!"라고 응답해야 합니다.
+
+요구사항 3) 
+서블릿 매핑web.xml 파일이나 어노테이션을 사용하여, 이 서블릿을 "/welcome" URL 패턴에 매핑하세요.
+
+참고 : 
+// 응답 설정response.setContentType("text/html;charset=UTF-8");
+response.getWriter().write("<h2>여기에 메시지 출력!</h2>");
+
