@@ -1,0 +1,20 @@
+요구사항 1)서블릿 클래스 생성
+- CarPurchaseServlet이라는 이름의 서블릿 클래스를 생성하세요. 
+- 이 클래스는 HttpServlet을 상속받아야 합니다.
+
+요구사항 2)폼 데이터 처리
+- doPost 메소드를 오버라이드하여, 사용자로부터 전송받은 "model" (자동차 모델명)과 "quantity" (수량) 파라미터를 처리하세요.
+
+요구사항 3)응답 메시지 생성
+- 사용자가 입력한 자동차 모델명과 수량을 포함하는 구매 완료 메시지를 생성하여 응답하세요.
+- 예: "3대의 Tesla Model S를 구매하셨습니다!“
+
+요구사항 4)서블릿 매핑
+- 이 서블릿을"/purchaseCar" URL패턴에 매핑하세요. 
+- web.xml파일이나 어노테이션을 사용할 수 있습니다.
+
+참고)
+// 응답 설정
+response.setContentType("text/html;charset=UTF-8");
+response.getWriter().write("<h2>여기에 메시지 출력!</h2>");
+
