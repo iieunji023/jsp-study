@@ -1,0 +1,25 @@
+요구사항 1)피드백 제출 서블릿 생성 
+- FeedbackSubmissionServlet라는 이름의 서블릿 클래스를 생성하세요. 
+- 이 클래스는 사용자로부터 피드백을 받아 처리하는 역할을 합니다.
+
+요구사항 2)피드백 저장
+- 서블릿에서는 사용자로부터 받은 피드백을 서버의 메모리(예: ArrayList<String>)에 저장합니다. 
+- 실제 애플리케이션에서는 데이터베이스나 파일 시스템을 사용할 수 있으나, 이 문제에서는 간단히 메모리에 저장하는 방식으로 구현합니다.
+
+요구사항 3)피드백 요약 페이지 구현
+- FeedbackSummaryServlet라는 두 번째 서블릿을 생성하여, 저장된 모든 피드백을 요약하여 보여주는 페이지(feedbackSummary.jsp)로 포워딩합니다.
+
+요구사항 4)페이지와 서블릿 매핑
+- 사용자 피드백 제출을 위한 URL 패턴을 "/submitFeedback"으로, 피드백 요약을 위한 URL 패턴을 "/feedbackSummary"로 매핑하세요.
+
+참고)
+예시 답안 구조
+- FeedbackSubmissionServlet.java: 사용자의 피드백을 받아 메모리에 저장합니다.
+- FeedbackSummaryServlet.java: 저장된 모든 피드백을 요약 페이지로 포워딩합니다.
+- feedbackSubmission.jsp: 사용자로부터 피드백을 받기 위한 폼을 포함합니다.
+- feedbackSummary.jsp: 제출된 모든 피드백을 목록 형태로 보여줍니다.
+
+구현 힌트:
+- ServletContext를 사용하여 애플리케이션 범위의 데이터(여기서는 피드백 리스트)를 저장하고 공유할 수 있습니다.
+- feedbackSummary.jsp 페이지에서는 JSTL의 <c:forEach> 태그를 사용하여 피드백 목록을 반복하여 출력할 수 있습니다.
+- 최초 접근은 /feedbackSubmission.jsp로 직접 접근하도록 합니다.
